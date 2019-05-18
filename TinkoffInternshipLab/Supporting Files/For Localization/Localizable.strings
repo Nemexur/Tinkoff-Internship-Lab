@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  TinkoffInternshipLab
+
+  Created by Alex Milogradsky on 18/05/2019.
+  Copyright © 2019 Alex Milogradsky. All rights reserved.
+*/
+
+// MARK: Titles
+
+"tinkoff_news_title" = "Tinkoff News";
+"tinkoff_article_title" = "Tinkoff Article";
+
+// MARK: Core Data Stack Strings
+
+"persistent_store_coordinator_error" = "⛔ Error with persistentStoreCoordinator";
+"managed_object_model_error" = "⛔ Error with managedObjectModel";
+"model_url_error" = "⛔ Error with modelURL";
+"context_no_changes" = "Context has no changes";
+"fetching_data_error" = "⛔ Error in fetching Data";
+
+// MARK: Network Layer Strings
+
+"url_request_error" = "⛔ String can not be parsed to URL";
+"model_parsing_error" = "⛔ Received Data can not be parsed to model";
+"no_internet_conection" = "The Internet connection appears to be offline";
+"api_result_error" = "Unable to construct article from API";
