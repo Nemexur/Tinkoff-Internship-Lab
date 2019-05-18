@@ -9,7 +9,7 @@
 import Foundation
 
 struct APIInformation {
-    enum ForPixabayImages {
+    enum Tinkoff {
         static func newTinkoffNewsRequest(pageSize: Int, pageOffset: Int) -> IRequest {
             let urlString = "https://cfg.tinkoff.ru/news/public/api/platform/v1/getArticles?pageSize=\(pageSize)&pageOffset=\(pageOffset)"
             guard let url = URL(string: urlString) else { return Request(urlRequest: nil) }

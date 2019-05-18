@@ -20,7 +20,7 @@ final class RequestSender: IRequestSender {
             completion(.error(loc("url_request_error")))
             return
         }
-        let task = session.dataTask(with: urlRequest) { data, response, error in
+        let task = session.dataTask(with: urlRequest) { data, _, error in
             if let error = error {
                 completion(.error("\(error.localizedDescription)"))
                 return

@@ -14,7 +14,9 @@ extension UIView {
     func makeRounded() {
         let shape = CAShapeLayer()
         let radius = floor(self.bounds.height / 2)
-        shape.path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: radius, height: radius)).cgPath
+        shape.path = UIBezierPath(roundedRect: self.bounds,
+                                  byRoundingCorners: .allCorners,
+                                  cornerRadii: CGSize(width: radius, height: radius)).cgPath
         self.layer.mask = shape
         self.layer.masksToBounds = true
     }
@@ -22,7 +24,7 @@ extension UIView {
     /// Load UIView from Nib
     func loadNib() {
         let nib = UINib(nibName: String(describing: type(of: self)), bundle: nil)
-        guard let view = nib.instantiate(withOwner: self, options: nil)[0] as? UIView
+        guard let view = nib.instantiate(withOwner: self, options: nil).first as? UIView
             else { return }
         view.frame = bounds
         addSubview(view)

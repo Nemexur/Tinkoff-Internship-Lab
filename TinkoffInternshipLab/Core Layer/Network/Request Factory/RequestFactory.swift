@@ -10,13 +10,13 @@ import Foundation
 
 struct RequestFactory {
     static func tinkoffNewsConfig(pageSize: Int = 100, pageOffset: Int = 0) -> RequestConfig<TinkoffNewsJSONParser> {
-        return RequestConfig<TinkoffNewsJSONParser>(request: APIInformation.ForPixabayImages.newTinkoffNewsRequest(pageSize: pageSize,
+        return RequestConfig<TinkoffNewsJSONParser>(request: APIInformation.Tinkoff.newTinkoffNewsRequest(pageSize: pageSize,
                                                                                                                    pageOffset: pageOffset),
                                                     parser: TinkoffNewsJSONParser())
     }
     
     static func tinkoffArticleConfig(urlSlug: String) -> RequestConfig<TinkoffArticleJSONParser> {
-        return RequestConfig<TinkoffArticleJSONParser>(request: APIInformation.ForPixabayImages.tinkoffNewsDetails(urlSlug: urlSlug),
+        return RequestConfig<TinkoffArticleJSONParser>(request: APIInformation.Tinkoff.tinkoffNewsDetails(urlSlug: urlSlug),
                                                     parser: TinkoffArticleJSONParser())
     }
 }

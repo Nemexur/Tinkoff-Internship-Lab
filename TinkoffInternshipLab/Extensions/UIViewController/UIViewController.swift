@@ -12,6 +12,7 @@ import UIKit
 private extension CGFloat {
     static let loaderHeight: CGFloat = 40
 }
+
 extension UIViewController {
     /// Show Alert in ViewController
     func showAlert(text: String, alertType: AlertView.MessageType = .error) {
@@ -22,7 +23,7 @@ extension UIViewController {
     func setupLoader() -> LoadingView {
         let loadingView = LoadingView(frame: CGRect(origin: view.center,
                                                     size: CGSize(width: .loaderHeight, height: .loaderHeight)))
-        view.insertSubview(loadingView, at: view.subviews.count)
+        view.addSubview(loadingView)
         loadingView.translatesAutoresizingMaskIntoConstraints = false
         loadingView.widthAnchor.constraint(equalToConstant: .loaderHeight).isActive = true
         loadingView.heightAnchor.constraint(equalToConstant: .loaderHeight).isActive = true
