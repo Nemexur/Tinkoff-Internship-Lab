@@ -1,2 +1,2 @@
-# Tinkoff-Internship-Lab
+# Tinkoff Internship Lab
 Лабораторная работа для стажировки в Тинькофф 2019 год
