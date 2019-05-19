@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 private extension Int {
-    static let tinkoffAtriclesSize: Int = 20
+    static let pageSize: Int = 20
 }
 
 struct TinkoffNewsModel {
@@ -52,6 +52,7 @@ final class TinkoffNewsPresenter: ITinkoffNewsPresenter {
     // Dependencies
     weak var view: ITinkoffNewsView?
     
+    private var pageOffset: Int = 0
     private let requestManager: IRequestManager
     private let coreDataManager: ICoreDataManager
     
@@ -83,13 +84,14 @@ final class TinkoffNewsPresenter: ITinkoffNewsPresenter {
     }
     
     func requestTinkoffNews() {
-        requestManager.send(with: RequestFactory.tinkoffNewsConfig(pageSize: .tinkoffAtriclesSize)) { [weak self] result in
+        requestManager.send(with: RequestFactory.tinkoffNewsConfig(pageSize: .pageSize, pageOffset: pageOffset)) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let articles):
+                self.pageOffset += .pageSize
                 for article in articles.news {
-                    if let result: TinkoffArticle = self.coreDataManager.fetch(with: article.id) {
-                        self.viewModel.append(TinkoffNewsModel.from(result))
+                    if let _: TinkoffArticle = self.coreDataManager.fetch(with: article.id) {
+                        continue
                     } else {
                         guard let newArticle = TinkoffArticle.build(in: self.coreDataManager.contextForNewData,
                                                                     id: article.id,

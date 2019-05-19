@@ -70,7 +70,7 @@ extension TinkoffArticleViewController: ITinkoffArticleView {
             self.articleTitle.text = self.presenter.viewModel.title
             self.articleText.text = self.presenter.viewModel.text
             /*
-            По какой-то причине скролл вью не показывает текст, если он занимает где-то более 10000 высоты
+            По какой-то причине articleText не показывает текст, когда он делает высоту view более 10000
             Чтобы это исправить просто включим и выключим скролл
             */
             self.articleText.isScrollEnabled = true
