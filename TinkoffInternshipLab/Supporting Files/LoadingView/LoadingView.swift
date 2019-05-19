@@ -112,7 +112,7 @@ final class LoadingView: UIView {
                                             startAngle: CGFloat(90).degreesToRadians,
                                             endAngle: CGFloat(450).degreesToRadians, clockwise: true).cgPath
         shapeLayerOuter.fillColor = nil
-        shapeLayerOuter.strokeColor = UIColor(R: 180, G: 180, B: 180, A: 0.3).cgColor
+        shapeLayerOuter.strokeColor = UIColor.borderLineColor.cgColor
         shapeLayerOuter.lineWidth = .innerAndOuterLayerLineWidth
     }
     
