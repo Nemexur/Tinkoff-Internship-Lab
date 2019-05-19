@@ -8,12 +8,12 @@
 
 import Foundation
 
-protocol IRequest {
+protocol IBaseRequest {
     /// URL Request
     var urlRequest: URLRequest? { get }
 }
 
-final class Request: IRequest {
+final class BaseRequest: IBaseRequest {
     var urlRequest: URLRequest?
     init(urlRequest: URLRequest?) {
         self.urlRequest = urlRequest

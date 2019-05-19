@@ -9,6 +9,6 @@
 import Foundation
 
 struct RequestConfig<Parser> where Parser: Parsable {
-    let request: IRequest
+    let request: IBaseRequest
     let parser: Parser
 }

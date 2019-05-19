@@ -10,16 +10,16 @@ import Foundation
 
 struct APIInformation {
     enum Tinkoff {
-        static func newTinkoffNewsRequest(pageSize: Int, pageOffset: Int) -> IRequest {
+        static func newTinkoffNewsRequest(pageSize: Int, pageOffset: Int) -> IBaseRequest {
             let urlString = "https://cfg.tinkoff.ru/news/public/api/platform/v1/getArticles?pageSize=\(pageSize)&pageOffset=\(pageOffset)"
-            guard let url = URL(string: urlString) else { return Request(urlRequest: nil) }
-            return Request(urlRequest: URLRequest(url: url))
+            guard let url = URL(string: urlString) else { return BaseRequest(urlRequest: nil) }
+            return BaseRequest(urlRequest: URLRequest(url: url))
         }
         
-        static func tinkoffNewsDetails(urlSlug: String) -> IRequest {
+        static func tinkoffNewsDetails(urlSlug: String) -> IBaseRequest {
             let urlString = "https://cfg.tinkoff.ru/news/public/api/platform/v1/getArticle?urlSlug=\(urlSlug)"
-            guard let url = URL(string: urlString) else { return Request(urlRequest: nil) }
-            return Request(urlRequest: URLRequest(url: url))
+            guard let url = URL(string: urlString) else { return BaseRequest(urlRequest: nil) }
+            return BaseRequest(urlRequest: URLRequest(url: url))
         }
     }
 }

@@ -24,7 +24,7 @@
 		26A93E04228C86E600724A44 /* VisitBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A93E02228C86E600724A44 /* VisitBadgeView.swift */; };
 		26A93E07228C870400724A44 /* VisitBadgeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26A93E06228C870400724A44 /* VisitBadgeView.xib */; };
 		26A93E0B228C8F2700724A44 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A93E0A228C8F2700724A44 /* UIView.swift */; };
-		26A93E17228C9D4300724A44 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A93E16228C9D4300724A44 /* Request.swift */; };
+		26A93E17228C9D4300724A44 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A93E16228C9D4300724A44 /* BaseRequest.swift */; };
 		26A93E1A228C9DB500724A44 /* RequestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A93E19228C9DB500724A44 /* RequestConfig.swift */; };
 		26A93E1D228C9DE500724A44 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A93E1C228C9DE500724A44 /* Result.swift */; };
 		26A93E20228C9DFF00724A44 /* RequestSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A93E1F228C9DFF00724A44 /* RequestSender.swift */; };
@@ -73,7 +73,7 @@
 		26A93E02228C86E600724A44 /* VisitBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitBadgeView.swift; sourceTree = "<group>"; };
 		26A93E06228C870400724A44 /* VisitBadgeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VisitBadgeView.xib; sourceTree = "<group>"; };
 		26A93E0A228C8F2700724A44 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		26A93E16228C9D4300724A44 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		26A93E16228C9D4300724A44 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
 		26A93E19228C9DB500724A44 /* RequestConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestConfig.swift; sourceTree = "<group>"; };
 		26A93E1C228C9DE500724A44 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		26A93E1F228C9DFF00724A44 /* RequestSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSender.swift; sourceTree = "<group>"; };
@@ -294,7 +294,7 @@
 		26A93E15228C9D3600724A44 /* BaseRequest */ = {
 			isa = PBXGroup;
 			children = (
-				26A93E16228C9D4300724A44 /* Request.swift */,
+				26A93E16228C9D4300724A44 /* BaseRequest.swift */,
 				26A93E21228C9E8300724A44 /* Parsable.swift */,
 			);
 			path = BaseRequest;
@@ -556,7 +556,7 @@
 			files = (
 				26A93E2A228CA0B800724A44 /* RequestFactory.swift in Sources */,
 				26A93DCF228C7EA900724A44 /* TinkoffNewsViewController.swift in Sources */,
-				26A93E17228C9D4300724A44 /* Request.swift in Sources */,
+				26A93E17228C9D4300724A44 /* BaseRequest.swift in Sources */,
 				26A93E51228CBCB800724A44 /* String.swift in Sources */,
 				26A93E65228D54A800724A44 /* TinkoffArticle.swift in Sources */,
 				26A93E04228C86E600724A44 /* VisitBadgeView.swift in Sources */,

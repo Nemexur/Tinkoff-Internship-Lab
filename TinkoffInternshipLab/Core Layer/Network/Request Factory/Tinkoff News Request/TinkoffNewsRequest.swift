@@ -58,8 +58,8 @@ final class TinkoffNewsJSONParser: Parsable {
     func parse(data: Data) -> Model? {
         let jsonDecoder = JSONDecoder()
         do {
-            let pixabayModel = try jsonDecoder.decode(Model.self, from: data)
-            return pixabayModel
+            let tinkoffNewsModel = try jsonDecoder.decode(Model.self, from: data)
+            return tinkoffNewsModel
         } catch {
             return nil
         }
