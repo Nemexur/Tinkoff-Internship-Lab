@@ -78,17 +78,17 @@ final class AlertView: UIView {
         sharedView.closeButton.tintColor = .white
     }
     
-    @IBAction func closePressed(_ sender: UIButton) {
+    @IBAction private func closePressed(_ sender: UIButton) {
         fadeOut()
     }
 
-    func fadeIn() {
+    private func fadeIn() {
         UIView.animate(withDuration: .interval300ms) {
             self.alpha = 1
         }
     }
     
-    @objc func fadeOut() {
+    @objc private func fadeOut() {
         UIView.animate(withDuration: .interval300ms, animations: {
             self.alpha = 0
         }, completion: { _ in

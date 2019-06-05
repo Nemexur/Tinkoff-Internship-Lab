@@ -44,9 +44,7 @@ final class LoadingView: UIView {
         Position(seconds: 0.2, start: 1.875),
         Position(seconds: 0.2, start: 2.250),
         Position(seconds: 0.2, start: 2.625),
-        Position(seconds: 0.3, start: 3.000),
-        Position(seconds: 0.3, start: 3.250),
-        Position(seconds: 0.3, start: 3.625)
+        Position(seconds: 0.3, start: 3.000)
     ]
     
     override var layer: CAShapeLayer {
